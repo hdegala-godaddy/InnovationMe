@@ -1,0 +1,10 @@
+div{
+	width : 10vw;
+	height : 4vw;
+	border-style : solid;
+	border-width : 2vw;
+	border-color : blue;
+	border-radius : 0.5vw;
+	margin : 5vw;
+	padding : 1vw;
+}
