@@ -1,0 +1,35 @@
+<html>
+<head>
+<link rel="stylesheet" href="Animal.css"/>
+</head>
+
+<script type="text/javascript">
+	function liveChanged(evt){
+		var eventd = evt || event;
+		console.log("Changed " + eventd.checked);
+	}
+</script>
+<body>
+	
+<header>
+	<h1> wild Animals</h1>
+</header>
+<nav >
+	<a href=""> Creeping </a>
+	<a href=""> Crawling </a>
+	<a href=""> Running </a>
+	<a href=""> Flying </a>
+</nav>
+
+<label for="live">Living?</label>
+<input name="live" id="live" type="checkbox"  onchange="liveChanged(this)" />
+
+
+</body>
+
+
+
+
+</html>
+
+

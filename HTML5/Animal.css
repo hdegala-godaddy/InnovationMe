@@ -1,0 +1,30 @@
+
+body{
+	background-image: url(BalckHD.jpg);
+	color: white;	
+}
+
+header {
+	text-align: center;
+	margin:2vw;
+	padding:1vw;
+}
+
+header h1 
+
+nav {
+	text-align: center;
+}
+nav a{
+	background-color: green;
+	margin:1vw;
+	padding:1vw;
+	//color: ;
+	border-radius:  .25vw ;
+/*	min-width: 4vw;
+	min-height: 1vw;
+	*/
+	size: 4vw 1vw;
+}
+
+
