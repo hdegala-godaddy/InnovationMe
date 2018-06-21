@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<script type="text/javascript">
+
+	function selClicked(){
+		document.writeln(document.getElementById("selAnimal").value);
+	}
+
+	</script>
+	<!--link rel="stylesheet" type="text/css" href="html5.css"/-->
+</head>
+<body>
+	<header>
+		<h1>First html document </h1>
+	</header>
+
+	<label>
+		Animal that you like
+	</label>
+	<select id="selAnimal" onblur="selClicked()">
+		<option value="cow"> COW</option>
+		<option> TIGER</option>
+		<option> Elephant</option>
+	</select>
+	<aside>
+		<img src="ExampleAnimal.png" />
+
+	</aside>
+
+
+</body>
+</html>
