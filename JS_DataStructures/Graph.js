@@ -5,12 +5,12 @@ const LinkedList = require("./LinkedList.js");
     class Node {
         constructor(index, ...connectedNodes) {
             this.index = index;
-            this.connectedNodes = 
-            connectedNodes;
+            this.connectedNodes = new LinkedList(connectedNodes);
         }
 
         printNode() {
-            console.log(this.index + " -> " + this.connectedNodes);
+            console.log(this.index);
+            this.connectedNodes.printLinkedList();
         }
 
     }
@@ -42,6 +42,7 @@ const LinkedList = require("./LinkedList.js");
                 var latestElem = bfsQ.dequeue();
                 if (latestElem && !visited[latestElem.index]) {
                     visited[latestElem.index] = true;
+                    let connectedNodesItr = latestElem.connectedNodes.makeItterator();
 
                     latestElem.connectedNodes.forEach(function (element) {
                         bfsQ.enqueue(_this.nodeList[element]);
@@ -76,7 +77,7 @@ const LinkedList = require("./LinkedList.js");
             let _this = this;
 
             (function traverseDFS(node) {
-                if (!visited[node.index]) {
+                if (node && !visited[node.index]) {
                     visited[node.index] = true;
                     callBack(node);
                     node.connectedNodes.forEach((elem) => {
@@ -112,6 +113,6 @@ const LinkedList = require("./LinkedList.js");
         elem.printNode();
     });
 
-    console.log(module);
+    //console.log(module);
 })();
-     console.log(module);
+     //console.log(module);
