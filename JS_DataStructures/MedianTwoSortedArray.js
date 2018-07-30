@@ -38,11 +38,21 @@ function median(a, b, n) {
             let bigArray = a.length > b.lenght ? a : b;
             let smallArray = a.length < b.lenght ? a : b;
 
-            let temp = (bigArray.length - 1) / 2;
+            let tempIndex = (bigArray.length - 1) / 2;
 
             let pos = findPos(smallArray, bigArray[temp]);
 
+            let numOfElmntsB4 = pos;
+            let numOfElmntsA4 = smallArray.length - pos - 1;
 
+            if (numOfElmntsB4 > numOfElmntsA4 ){
+
+            }
+            else if ( numOfElmntsB4 > numOfElmntsA4) {
+
+            } else if (tempIndex + numOfElmntsB4 === n){
+                return bigArray[tempIndex];
+            }
 
 
 
@@ -52,27 +62,10 @@ function median(a, b, n) {
 }
 
 function findPos(arr, element) {
-
+    let returnPosition = Utils.findPos(arr,0,arr.length,element);
+    console.log(returnPosition);
+    return returnPosition;
 }
-
-function findPosition(arr, low, high, element) {
-
-    if (element < arr[low]) {
-        return low;
-    } else if (element < arr[low] && element < arr[low + 1]) {
-        return low + 1;
-    } else if (element > arr[high - 1] && element < arr[high]) {
-        return high;
-    } else {
-        const middleIndex = (low + high) / 2;
-        if (arr[middleIndex] > element) {
-            return findPosition(arr, middleIndex, high, element);
-        } else if (arr[middleIndex] < element) {
-            return findPosition(arr, low, middleIndex, element);
-        }
-    }
-}
-
 
 // function findPos(arr, element) {
 
