@@ -5,6 +5,66 @@ import './App.css';
 import List from "./MultiListPage";
 
 class App extends Component {
+  state = {
+    listItems : [{
+      url:"",
+      header: "Harsha",
+      description: " Get in to this",
+      family: [
+          {
+              url:"",
+              header: "Jahnawii",
+              description: " Getting in to this"
+          },
+          {
+              url:"",
+              header: "Anagha",
+              description: " Getting in to this"
+          },
+          {
+              url:"",
+              header: "Anaaya",
+              description: " Getting in to this"
+          }
+      ]
+  },
+  {
+      url:"",
+      header: "Jahnawii",
+      description: " Get in to this"
+  },
+  {
+      url:"",
+      header: "Anagha",
+      description: " Get in to this"
+  },
+  {
+      url:"",
+      header: "Anaaya",
+      description: " Get in to this"
+  }
+  ]
+  }
+  
+
+
+  clicked = () =>{
+
+    setTimeout(() => {
+      this.setState(prevState => ({
+        listItems: prevState.listItems.push({
+          url:"",
+          header: "Anaaya",
+          description: " Getting in to this",
+          style: "margin:20px"
+      })
+    }))
+    }, 5000);
+    
+
+
+  }
+
   render() {
     return (
       <div className="App">
@@ -12,10 +72,10 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
+        <p className="App-intro" onClick={this.clicked}>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <List> </List>
+        <List sourceArray = {this.state.listItems}> </List>
       </div>
     );
   }

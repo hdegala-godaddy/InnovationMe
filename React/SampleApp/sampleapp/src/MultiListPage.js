@@ -1,68 +1,40 @@
 import React from 'react';
+//import "./MultiListPage.css";
+
+const styles = {
+        "margin-left": "100px"
+    };
 
 
 class ListItem extends React.Component{
 
+    clicked = () => {
+        console.log("Clicked ");
+    }
+
     render() {
         return (
-            <div>   
+            <div style={this.props.style} onClick={}>   
                 <img src = {this.props.url} />
                 <h1> {this.props.header}</h1>
                 <p> {this.props.description}</p>
-                {this.props.family && this.props.family.map(familyMember => <ListItem style={{"margin-left":"100px"}} {...familyMember}/>)}
+                {this.props.family && this.props.family.map(familyMember => <ListItem style={styles} {...familyMember}/>)}
             </div>
         );
     }
 }
 
-
 class List extends React.Component{
     variable = "Harsha Variable";
     state = {
-        listItems : [{
-        url:"",
-        header: "Harsha",
-        description: " Get in to this",
-        family: [
-            {
-                url:"",
-                header: "Jahnawii",
-                description: " Getting in to this"
-            },
-            {
-                url:"",
-                header: "Anagha",
-                description: " Getting in to this"
-            },
-            {
-                url:"",
-                header: "Anaaya",
-                description: " Getting in to this"
-            }
-        ]
-    },
-    {
-        url:"",
-        header: "Jahnawii",
-        description: " Get in to this"
-    },
-    {
-        url:"",
-        header: "Anagha",
-        description: " Get in to this"
-    },
-    {
-        url:"",
-        header: "Anaaya",
-        description: " Get in to this"
-    }
-]};
+            sourceArray : this.props.sourceArray
+        };
 
     render(){
         return (
             <div>
              <p> {this.variable} </p>   
-            {this.state.listItems.map( listItem => <ListItem {...listItem} /> )}
+               {this.state.sourceArray.map( listItem => <ListItem  {...listItem}/> )}
             </div>
         );
     }
