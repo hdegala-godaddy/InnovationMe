@@ -1,0 +1,179 @@
+.toaster-error-message {
+    display: block;
+    background-color:rgb(200, 71, 71);
+    color: black;
+}
+
+.toaster-error-message .error-close-btn{
+    float: right;
+    margin-right: 2vw;
+    margin-top: .5vh;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.toaster-error-message .error-msg-text {
+    background-color: transparent;
+    width: 80vw;
+    color: black;
+}
+.invisible {
+    display: none
+}
+
+.main-container{
+    width: 44vw;
+    height: 95vh;
+    margin: auto;
+    border: 1.5px solid black;
+}
+
+.main-container .search-container{
+    border-bottom: 1px solid;
+    height: 10%;
+    margin-top: 4%;
+    padding-left: 2vw;
+}
+
+.main-container .search-container .search-input-box,.search-message-box{
+    border: 2px outset #acc8d5;
+    padding-left: 1vw;
+}
+
+.main-container .search-container .search-input-box{
+    width : 15vw; 
+    height: 4vh;
+    padding-left: 1vw;
+}
+
+.main-container .search-container .search-input-box::-webkit-input-placeholder{
+   font-style: italic;
+}
+
+.main-container .search-container .search-message-box{
+    width : 25vw;
+    height: 2.5vh;
+    padding-left: 1vw;
+    margin-top: 3px;
+    background-color: rgb(236, 30, 30); 
+    padding-top:2px;
+    border-radius: 3vw;
+}
+
+.main-container .search-container .search-button {
+    text-align: center;
+    height: 4vh;
+    width : 8vw;
+    margin-left: 1vw;
+    border: none;
+    background-image: linear-gradient(to right, rgb(104, 155, 162) , rgb(53, 205, 225));
+    outline: none;
+    box-shadow: 0 6px rgb(153, 178, 182);
+    border-radius: 3vw;
+
+}
+
+.main-container .search-container .search-button:hover {
+    background-image: linear-gradient(to right, rgb(84, 196, 211) , rgb(33, 222, 247));
+    cursor: pointer;
+}
+
+.main-container .search-container .search-button:active {
+  background-image: linear-gradient(to right, rgb(104, 155, 162) , rgb(53, 205, 225));
+  box-shadow: 0 2px rgb(153, 178, 182);
+  transform: translateY(4px);
+}
+
+.main-container .search-result {
+
+}
+.main-container .search-result .search-summary {
+    height : 4vh;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.main-container .search-result .search-summary .summary-total-div {
+    float: left;
+    margin-left: .2vh;
+    margin-top: 14px;
+}
+.main-container .search-result .search-summary .summary-total-div .total-summary-box {
+    color : black;
+    border: none;
+    text-align: center;
+    vertical-align: bottom;
+    height: 5vh;
+}
+
+.main-container .search-result .search-summary .summary-pagination-div{
+    float: right;
+    margin-right:20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top:14px;
+}
+
+.main-container .search-result .search-summary .summary-pagination-div .pagination-left-btn,.pagination-right-btn {
+    border: none;
+    outline: none;
+}
+
+.main-container .search-result .search-summary .summary-pagination-div .pagination-left-btn:active,.pagination-right-btn:active {
+    transform: translateY(4px);
+    border: none;
+}
+
+.main-container .search-result .search-summary .summary-pagination-div .pagination-text {
+    border: none;
+    text-align: center;
+    min-width: 4vw;
+}
+
+.summary-item-details{
+    clear:both;
+   display : grid;
+   grid-template-rows: auto auto auto auto auto;
+   margin-top : 10px;
+   grid-row-gap : 10px;
+   padding-bottom : 10px;
+}
+
+.item-class {
+    height : 14vh;
+    font : 1vw;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+
+.image-div {
+}
+
+.image-div .image{
+    margin: 5px;
+    border: 1px solid;
+    width: 12vw;
+    height: 13vh;
+}
+
+.item-metadata-div{
+}
+
+.item-metadata-div .metadata-display-name {
+    font-size: 1.6em;
+}
+
+.item-metadata-div .metadata-game-name {
+    display: block;
+    margin-top : 3px;
+    font-size: 1em;
+}
+
+.item-metadata-div .metadata-description-textarea {
+    display:block;
+    margin-top : 3px;
+    width : 27vw;
+    border: none;
+
+}
