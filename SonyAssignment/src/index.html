@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="error-toaster" class="toaster-error-message invisible">
+                <textarea id="error-msg-id" rows="1" cols="10" class="error-msg-text"> </textarea>
+                <button id="close-error-msg-button" class="error-close-btn"> X </button>
+        </div>
+        <div class="main-container">
+            <section id="SearchContainer" class="search-container">
+                <input type=text id="SearchInputBox" class="search-input-box"  placeholder="Search query..." />
+                <button id="SearchButton" class="search-button">Search</button>
+                <br>
+                <!-- <input type=text id="SearchValidBox" readonly class="search-message-box invisible" value="Query string errors" disabled/> -->
+                <textarea id="SearchValidBox" readonly class="search-message-box invisible" readonly></textarea>
+            </section>
+            <div id="SearchResult" class="search-result">
+                <div id="SearchSummary" class="search-summary">
+                    <div class="summary-total-div" >
+                            <label id="TotalSummmaryText" readonly class="total-summary-box" readonly></label>
+                    </div>
+                    <div class="summary-pagination-div" >
+                            <button id="PaginationLeftBtn" class="pagination-left-btn">&#9664;</button>
+                            <label id="pagination-text-id" class="pagination-text"> </label>
+                            <button id="PaginationRightBtn" class="pagination-right-btn">&#9654;</button>
+                    </div>
+                </div>
+                <div>
+                        <div id="summary-item-details" class="summary-item-details">
+                        </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+    </body>
+
+</htmll>
