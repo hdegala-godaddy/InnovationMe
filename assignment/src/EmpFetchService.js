@@ -13,12 +13,21 @@ function Node(empDetails){
     return obj;
 }
 
-class EmpFetchService{
+class EmployeeFetchService{
 
-    constructor(empId){
+    constructor(empId, callBack){
         //this.empTree = new Map();
         this.empIDToTreeNodeMap = new Map();
         this.initialEmpId = empId;
+        this.callBack = callBack;
+    }
+
+    initEmpId(empID) {
+        this.initialEmpId = empID;
+    }
+
+    initCallBack(callBack) {
+        this.callBack = callBack;
     }
 
     insertIntoTree(parentEmpId,parentName, empId,node){
@@ -36,12 +45,15 @@ class EmpFetchService{
             let empDetails = await ThresholdFetchService.fetch(empId);
             let treeNode = new Node(empDetails);
             this.insertIntoTree(parentEmpId, parentName, empId, treeNode);
+            this.callBack(this.empIDToTreeNodeMap);
             
             empDetails.reports.forEach((id) => {
                 if (!this.empIDToTreeNodeMap.has(id)) {
                     this.fetchAndFillEmpDetails(id,empId, empDetails.name);
                 }
             });
+
+            
 
         } catch(excp) {
            // alert(excp);
@@ -50,7 +62,13 @@ class EmpFetchService{
 
         return this.empIDToTreeNodeMap;
     }
+
+    getJson(){
+        return this.empIDToTreeNodeMap.get(this.initialEmpId);
+    }
 }
+
+let EmpFetchService = new EmployeeFetchService();
 
 export default EmpFetchService;
 
