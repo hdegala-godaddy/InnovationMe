@@ -2,7 +2,7 @@
 
 class Utilities{
 
-    // findInsertion position in a sorted array.
+    // findInsertion position in a sorted array.π
     //Recursive 
     //Note implement NonRecursive
     findPosition(arr, low, high, element) {
